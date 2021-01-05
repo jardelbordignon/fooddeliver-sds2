@@ -1,6 +1,6 @@
 package com.jbdev.fooddeliver.entities.utils;
 
-import java.sql.Date;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.EntityListeners;
@@ -24,7 +24,7 @@ public abstract class EntityDefaults extends EntityId {
 		insertable = false, 
 		updatable = false
 	)
-    private Date createdAt;
+    private LocalDateTime createdAt;
 
 	//@JsonIgnore
     //@DateTimeFormat(iso = ISO.DATE_TIME)
@@ -32,15 +32,15 @@ public abstract class EntityDefaults extends EntityId {
     	columnDefinition="TIMESTAMP WITH TIME ZONE default current_timestamp on update current_timestamp",
     	insertable = false
     )
-    private Date updatedAt;
+    private LocalDateTime updatedAt;
 
-	public Date getCreatedAt() { return createdAt; }
+	public LocalDateTime getCreatedAt() { return createdAt; }
 
-	public void setCreatedAt(Date at) { createdAt = at; }
+	public void setCreatedAt(LocalDateTime at) { createdAt = at; }
 
-	public Date getUpdatedAt() { return updatedAt; }
+	public LocalDateTime getUpdatedAt() { return updatedAt; }
 
-	public void setUpdatedAt(Date at) { updatedAt = at; }
+	public void setUpdatedAt(LocalDateTime at) { updatedAt = at; }
 
     
 }
