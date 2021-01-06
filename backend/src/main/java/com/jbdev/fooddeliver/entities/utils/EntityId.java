@@ -2,9 +2,12 @@ package com.jbdev.fooddeliver.entities.utils;
 
 import java.io.Serializable;
 
-import javax.persistence.*;
+import javax.persistence.EntityListeners;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 
-import org.hibernate.annotations.GenericGenerator;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 // @MappedSuperclass informa que esta é uma superclasse, NÃO está diretamente ligada a uma tabela
@@ -16,10 +19,11 @@ public abstract class EntityId implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
+	 //@GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    //@GenericGenerator(name = "native", strategy = "native")
+	//@GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
-    @GenericGenerator(name = "native", strategy = "native")
-    @Column(nullable = false, updatable = false)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
 	public void setId(Long id) { this.id = id; }

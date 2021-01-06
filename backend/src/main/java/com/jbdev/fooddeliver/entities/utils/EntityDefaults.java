@@ -29,7 +29,7 @@ public abstract class EntityDefaults extends EntityId {
 	//@JsonIgnore
     //@DateTimeFormat(iso = ISO.DATE_TIME)
     @Column(
-    	columnDefinition="TIMESTAMP WITH TIME ZONE default current_timestamp on update current_timestamp",
+    	columnDefinition="TIMESTAMP WITH TIME ZONE default current_timestamp",
     	insertable = false
     )
     private Date updatedAt;
