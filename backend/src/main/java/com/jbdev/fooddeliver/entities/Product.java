@@ -17,8 +17,8 @@ public class Product extends EntityDefaults {
 	
 	public Product() {}
 
-	public Product(String name, Double price, String description, String imageUri) {
-		super();
+	public Product(Long id, String name, Double price, String description, String imageUri) {
+		this.setId(id);
 		this.name = name;
 		this.price = price;
 		this.description = description;

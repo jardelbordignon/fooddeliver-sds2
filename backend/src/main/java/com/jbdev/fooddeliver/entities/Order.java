@@ -32,74 +32,50 @@ public class Order extends EntityDefaults {
 	)
 	private Set<Product> products = new HashSet<>();
 	
-	
 	public Order() {}
 
-
-	public Order(String address, Double latitude, Double longitude, Instant moment, OrderStatus status) {
-		super();
+	public Order(Long id, String address, Double latitude, Double longitude, OrderStatus status) {
+		this.setId(id);
 		this.address = address;
 		this.latitude = latitude;
 		this.longitude = longitude;
-		//this.moment = moment;
 		this.status = status;
 	}
-
 
 	public String getAddress() {
 		return address;
 	}
 
-
 	public void setAddress(String address) {
 		this.address = address;
 	}
-
 
 	public Double getLatitude() {
 		return latitude;
 	}
 
-
 	public void setLatitude(Double latitude) {
 		this.latitude = latitude;
 	}
-
 
 	public Double getLongitude() {
 		return longitude;
 	}
 
-
 	public void setLongitude(Double longitude) {
 		this.longitude = longitude;
 	}
-
-
-	//public Instant getMoment() {
-	//	return moment;
-	//}
-
-
-	//public void setMoment(Instant moment) {
-	//	this.moment = moment;
-	//}
-
 
 	public OrderStatus getStatus() {
 		return status;
 	}
 
-
 	public void setStatus(OrderStatus status) {
 		this.status = status;
 	}
 
-
 	public Set<Product> getProducts() {
 		return products;
 	}
-
-	
 	
 }

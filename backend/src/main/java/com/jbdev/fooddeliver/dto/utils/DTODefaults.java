@@ -1,22 +1,21 @@
 package com.jbdev.fooddeliver.dto.utils;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @SuppressWarnings("serial")
 public abstract class DTODefaults extends DTOId {
 
+	private Date createdAt;
 
-	private LocalDateTime createdAt;
+    private Date updatedAt;
 
-    private LocalDateTime updatedAt;
+	public Date getCreatedAt() { return createdAt; }
 
-	public LocalDateTime getCreatedAt() { return createdAt; }
+	public void setCreatedAt(Date at) { createdAt = at; }
 
-	public void setCreatedAt(LocalDateTime at) { createdAt = at; }
+	public Date getUpdatedAt() { return updatedAt; }
 
-	public LocalDateTime getUpdatedAt() { return updatedAt; }
-
-	public void setUpdatedAt(LocalDateTime at) { updatedAt = at; }
+	public void setUpdatedAt(Date at) { updatedAt = at; }
 
     
 }
