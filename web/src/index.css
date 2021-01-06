@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #da5c5c;
+  --primary-hover-color: #a74b4b;
+  --dark-color: #263238;
+  --secondary-color: #9E9E9E;
+  --light-color: #F5F5F5;
+}
+
+html, body {
+  margin: 0;
+  padding:0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+/* Commons */
+.flex {
+  display: flex;
+}
+.vertical-center {
+  align-items: center;
+}
+.horizontal-center {
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+button:hover {
+  background-color: var(--primary-hover-color);
+}
+
+
+/* NavBar */
+.main-navbar {
+  height: 70px;
+  background-color: var(--primary-color);
+  padding: 0 45px;
+}
+.main-navbar .text-logo {
+  font-size: bold;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 33px;
+  letter-spacing: -0.015em;
+  color: var(--light-color);
+  margin-left: 15px;
+}
+.main-navbar .text-logo:hover {
+  color: var(--secondary-color);
+} 
