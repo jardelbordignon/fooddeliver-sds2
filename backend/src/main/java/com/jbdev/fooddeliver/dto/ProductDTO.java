@@ -17,8 +17,6 @@ public class ProductDTO extends DTODefaults {
 
 	public ProductDTO(Long id, Date createdAt, Date updatedAt, String name, Double price, String description, String imageUri) {
 		this.setId(id);
-		//this.setCreatedAt(createdAt);
-		//this.setUpdatedAt(updatedAt);
 		this.name = name;
 		this.price = price;
 		this.description = description;
