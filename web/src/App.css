@@ -5,7 +5,10 @@
   --primary-hover-color: #a74b4b;
   --dark-color: #263238;
   --secondary-color: #9E9E9E;
+  --white-gray-color: #E6E6E6;
   --light-color: #F5F5F5;
+  --white-color: #fff;
+  --green-color: #008E5B;
 }
 
 html {
@@ -156,14 +159,67 @@ header .row.left a:hover {
 
 /* Orders */
 
-
 /* OrderSteps */
 .order-steps > div {
-  border-bottom: .3rem solid #c0c0c0;
+  border-bottom: .3rem solid var(--secondary-color);
   flex: 1;
   padding: 1rem;
 }
 .order-steps > div.active {
   border-color: var(--primary-color);
   color: var(--primary-color);
+}
+
+.product-list {
+  background-color: var(--light-color);
+}
+/* Product Card */
+.card-container {
+  width: 24rem;
+  height: 46rem;
+  padding: 1.5rem;
+  background-color: var(--white-color);
+  border-radius: .5rem;
+  margin: .7rem;
+  padding-top: .5rem;
+  box-sizing: border-box;
+  border: .4rem solid var(--white-color);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all .2s;
+}
+.card-container .colored {
+  color: var(--primary-color);
+}
+.card-container:hover {
+  transform: scale(1.01);
+  /* transform: translateY(-0.2rem); */
+}
+.card-container.selected {
+  border-color: var(--green-color);
+}
+.card-container.selected .colored {
+  color: var(--green-color);
+}
+.card-container .card-image {
+  max-height: 13rem;
+}
+.card-container .card-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+.card-container h2 {
+  border-bottom: 1px solid var(--white-gray-color);
+  padding-bottom: 1rem;
+}
+
+.card-body {
+  padding: 1rem;
+}
+.card-body > * {
+  margin-bottom: .5rem;
+}
+.price {
+  font-size: 2rem;
 }
