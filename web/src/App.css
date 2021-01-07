@@ -152,3 +152,18 @@ header .row.left a:hover {
 .home-image svg {
   max-height: 40rem;
 }
+
+
+/* Orders */
+
+
+/* OrderSteps */
+.order-steps > div {
+  border-bottom: .3rem solid #c0c0c0;
+  flex: 1;
+  padding: 1rem;
+}
+.order-steps > div.active {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}

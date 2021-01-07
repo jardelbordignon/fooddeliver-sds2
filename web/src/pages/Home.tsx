@@ -1,4 +1,6 @@
 
+import { Link } from 'react-router-dom'
+
 import { ReactComponent as MainImage } from '../assets/main.svg'
 
 export default function Home() {
@@ -14,9 +16,9 @@ export default function Home() {
             Escolha seus sabores preferidos e <br />
             rapidinho levamos até a sua porta.
           </h3>
-          <a href='/orders' className='button'>
+          <Link to='/orders' className='button'>
             FAZER PEDIDO
-          </a>
+          </Link>
         </div>
 
         <div className='home-image'>

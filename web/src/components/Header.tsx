@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import { ReactComponent as Logo } from '../assets/logo.svg'
 
 export default function Header() {
@@ -5,7 +7,7 @@ export default function Header() {
     <header className='row'>
       <div className='row left'>
         <Logo />
-        <a href='/'>DS Delivery</a>   
+        <Link to='/'>DS Delivery</Link>   
       </div>
     </header>
   )
