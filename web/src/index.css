@@ -56,17 +56,16 @@ a {
 } 
 
 
+
 /* Home Page */
 .home-container {
-  padding-top: 100px;
-  height: calc(100vh - 254px);
+  height: calc(100vh - 261px);
 }
 
 .home-content {
   display: flex;
   justify-content: center;
 }
-
 .home-title {
   font-weight: bold;
   font-size: 55px;
@@ -104,7 +103,6 @@ a {
   background-color: var(--primary-hover-color);
   transform: scale(1.01);
 }
-
 .home-image svg {
   width: 100%;
 }
@@ -140,4 +138,28 @@ a {
   .home-image svg {
     width: 80%;
   }
+}
+
+
+
+/* Footer */
+footer {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: var(--dark-color);
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFF;
+}
+
+footer .footer-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-icons > * {
+  margin-right: 5px;
 }

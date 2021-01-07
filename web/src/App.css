@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #da5c5c;
+  --primary-hover-color: #a74b4b;
+  --dark-color: #263238;
+  --secondary-color: #9E9E9E;
+  --light-color: #F5F5F5;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  margin: 0;
+}
+
+a { 
+  text-decoration: none;
+  transition: all .2s;
+}
+.button {
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  transition: color .2s;
+}
+.button:hover {
+  background-color: var(--primary-hover-color);
+}
+
+#root {
+  height: 100%;
+}
+
+
+/* Layout */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+  'header'
+  'main'
+  'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 6rem 1fr 8rem;
+  height: 100%;
+}
+
+header {
+  grid-area: header;
+  background-color: var(--primary-color);
+  padding: 1rem 4.5rem;
+}
+
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  text-align: center;
+  font-size: 1.2rem;
+  padding-top: 1.5rem;
+}
+footer div svg {
+  margin: 1.2rem .3rem 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.row.center {
+  justify-content: center;
+}
+.row.top {
+  align-items: flex-start;
+}
+.row.left {
+  justify-content: flex-start;
+}
+.col-1 {
+  flex: 1 1 25rem;
+}
+.col-2 {
+  flex: 2 1 50rem;
+}
+.col-3 {
+  flex: 30 1 75rem;
+}
+
+
+/* Header component */
+header .row.left a {
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  letter-spacing: -0.06rem;
+  color: var(--light-color);
+  margin-left: 1.5rem;
+}
+header .row.left a:hover {
+  color: var(--secondary-color);
+}
+
+/* Home page */
+.home-container {
+  height: 100%;
+}
+
+.home-title {
+  font-weight: bold;
+  font-size: 5rem;
+  line-height: 5.5rem;
+  letter-spacing: -0.1rem;
+  color: var(--dark-color);
+}
+
+.home-subtitle {
+  font-size: 2.4rem;
+  line-height: 33px;
+  letter-spacing: -0.015em;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+}
+
+.home-btn-order {
+  font-weight: bold;
+  font-size: 2.4rem;
+  letter-spacing: -0.1rem;
+}
+
+.home-image svg {
+  max-height: 40rem;
+}

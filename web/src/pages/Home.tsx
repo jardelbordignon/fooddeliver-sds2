@@ -3,19 +3,18 @@ import { ReactComponent as MainImage } from '../assets/main.svg'
 
 export default function Home() {
   return (
-    <div className='home-container'>
-      <div className='home-content'>
+    <div className='row center home-container'>
 
-        <div className='home-actions'>
+      <div className='row top'>
+        <div>
           <h1 className='home-title'>
             Faça seu pedido <br />que entregamos <br />para você!
           </h1>
           <h3 className='home-subtitle'>
-            Escolha seus sabores preferidos e rapidinho, <br/>
-            levamos até a sua porta. <br/>
-            Aproveite e faça um pedido!
+            Escolha seus sabores preferidos e <br />
+            rapidinho levamos até a sua porta.
           </h3>
-          <a href='/orders' className='home-btn-order'>
+          <a href='/orders' className='button'>
             FAZER PEDIDO
           </a>
         </div>
