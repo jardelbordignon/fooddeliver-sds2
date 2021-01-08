@@ -1,5 +1,4 @@
 
-import { error } from 'console'
 import { useEffect, useState } from 'react'
 
 import OrderSteps from '../components/OrderSteps'
@@ -10,7 +9,6 @@ import { Product } from './types'
 export default function Orders() {
   const [products, setProducts] = useState<Product[]>([])
 
-  console.log(products)
   useEffect(() => {
     fetchProducts()
       .then(res => setProducts(res.data))

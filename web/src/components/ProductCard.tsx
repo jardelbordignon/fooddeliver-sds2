@@ -1,5 +1,4 @@
 
-import PizzaImg from '../assets/pizza.png'
 import { Product } from '../pages/types'
 import { formatPrice } from '../utils/formatters'
 

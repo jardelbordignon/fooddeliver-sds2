@@ -171,16 +171,16 @@ header .row.left a:hover {
 }
 
 .product-list {
-  background-color: var(--light-color);
+  padding: 2rem 0;
 }
 /* Product Card */
 .card-container {
   width: 24rem;
   height: 46rem;
-  padding: 1.5rem;
+  padding: 1.3rem;
   background-color: var(--white-color);
   border-radius: .5rem;
-  margin: .7rem;
+  margin: 1rem;
   padding-top: .5rem;
   box-sizing: border-box;
   border: .4rem solid var(--white-color);
