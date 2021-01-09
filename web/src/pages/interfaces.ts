@@ -12,3 +12,11 @@ export interface OrderLocationDTO {
   longitude: number
   address: string
 }
+
+interface ProductId {
+  id: number
+}
+
+export interface OrderPayload extends OrderLocationDTO {
+  products: ProductId[]
+}

@@ -4,12 +4,18 @@ import { formatPrice } from '../utils/formatters'
 
 type Props = {
   product: Product
+  onSelectProduct: (product: Product) => void
+  isSelected: boolean
 }
 
-export default function ProductCard({product}: Props) {
+export default function ProductCard({product, onSelectProduct, isSelected}: Props) {
 
   return (
-    <div className='row top card-container'>
+    <div 
+      className={`row top card-container ${isSelected ? 'selected' : ''}`}
+      onClick={() => onSelectProduct(product)}
+    >
+
       <h3 className='colored'>
         { product.name }
       </h3>

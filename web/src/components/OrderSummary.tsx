@@ -1,21 +1,28 @@
+import { formatPrice } from '../utils/formatters'
 
-export default function OrderSummary() {
+interface Props {
+  amount: number
+  totalPrice: number
+  handleSubmit: () => void
+}
+
+export default function OrderSummary({ amount, totalPrice, handleSubmit }: Props) {
   return (
     <div className='row order-summary-container'>
       
       <div>
         <div>
-          <strong>2</strong>
+          <strong>{amount}</strong>
           Pedidos selecionados
         </div>
-        <div>
-          <strong>R$ 83,00</strong>
-          Valor total
-        </div>
+        <strong>{formatPrice(totalPrice)}</strong>
       </div>
 
       <div>
-        <button className='button primary'>
+        <button
+          onClick={handleSubmit}
+          className='button primary'
+        >
           FAZER PEDIDO
         </button>
       </div>
