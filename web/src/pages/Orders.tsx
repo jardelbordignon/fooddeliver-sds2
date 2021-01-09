@@ -1,10 +1,11 @@
 
 import { useEffect, useState } from 'react'
+import OrderLocation from '../components/OrderLocation'
 
 import OrderSteps from '../components/OrderSteps'
 import ProductCard from '../components/ProductCard'
 import { fetchProducts } from '../services/api'
-import { Product } from './types'
+import { Product } from './interfaces'
 
 export default function Orders() {
   const [products, setProducts] = useState<Product[]>([])
@@ -17,7 +18,7 @@ export default function Orders() {
 
   return (
     <div className='orders-container'>
-      <OrderSteps step={2} />
+      <OrderSteps step={1} />
 
       <div className='row center product-list'>
         { !!products.length &&
@@ -26,6 +27,8 @@ export default function Orders() {
           ))
         }
       </div>
+
+      <OrderLocation />
     </div>
   )
 }

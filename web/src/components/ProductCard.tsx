@@ -1,5 +1,5 @@
 
-import { Product } from '../pages/types'
+import { Product } from '../pages/interfaces'
 import { formatPrice } from '../utils/formatters'
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
 export default function ProductCard({product}: Props) {
 
   return (
-    <div className='row center card-container'>
+    <div className='row top card-container'>
       <h3 className='colored'>
         { product.name }
       </h3>
