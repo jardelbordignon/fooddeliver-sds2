@@ -16,18 +16,20 @@ public class OrderDTO extends DTODefaults {
 	private Double longitude;
 	//private Instant moment; // utilizei o created_at e updated_at gerados automaticamente
 	private OrderStatus status;
+	private Double total;
 	
 	private List<ProductDTO> products = new ArrayList<>();
 	
 	public OrderDTO() {}
 
-	public OrderDTO(Long id, String address, Double latitude, Double longitude, OrderStatus status) {
+	public OrderDTO(Long id, String address, Double latitude, Double longitude, OrderStatus status, Double total) {
 		super();
 		this.setId(id);
 		this.address = address;
 		this.latitude = latitude;
 		this.longitude = longitude;
 		this.status = status;
+		this.total = total;
 	}
 	
 	public OrderDTO(Order order) {
@@ -38,6 +40,7 @@ public class OrderDTO extends DTODefaults {
 		latitude = order.getLatitude();
 		longitude = order.getLongitude();
 		status = order.getStatus();
+		total = order.getTotal();
 		products = order.getProducts().stream().map(item -> new ProductDTO(item)).collect(Collectors.toList());
 	}
 
@@ -71,6 +74,14 @@ public class OrderDTO extends DTODefaults {
 
 	public void setStatus(OrderStatus status) {
 		this.status = status;
+	}
+	
+	public Double getTotal() {
+		return total;
+	}
+
+	public void setTotal(Double total) {
+		this.total = total;
 	}
 
 	public List<ProductDTO> getProducts() {
