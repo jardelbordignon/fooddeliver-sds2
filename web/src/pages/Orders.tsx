@@ -5,10 +5,11 @@ import OrderLocation from '../components/OrderLocation'
 import OrderSteps from '../components/OrderSteps'
 import ProductCard from '../components/ProductCard'
 import { fetchProducts } from '../services/api'
-import { Product } from './interfaces'
+import { OrderLocationDTO, Product } from './interfaces'
 
 export default function Orders() {
   const [products, setProducts] = useState<Product[]>([])
+  const [orderLocation, setOrderLocation] = useState<OrderLocationDTO>()
 
   useEffect(() => {
     fetchProducts()
@@ -28,7 +29,7 @@ export default function Orders() {
         }
       </div>
 
-      <OrderLocation />
+      <OrderLocation onChangeLocation={location => setOrderLocation(location)} />
     </div>
   )
 }

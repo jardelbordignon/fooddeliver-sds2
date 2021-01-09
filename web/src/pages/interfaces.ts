@@ -6,3 +6,9 @@ export interface Product {
   description: string
   imageUri: string
 }
+
+export interface OrderLocationDTO {
+  latitude: number
+  longitude: number
+  address: string
+}
