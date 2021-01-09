@@ -5,7 +5,7 @@
   --primary-hover-color: #a74b4b;
   --dark-color: #263238;
   --secondary-color: #9E9E9E;
-  --white-gray-color: #E6E6E6;
+  --light-gray-color: #E6E6E6;
   --light-color: #F5F5F5;
   --white-color: #fff;
   --green-color: #008E5B;
@@ -30,6 +30,12 @@ h1 {
   margin: 0;
 }
 
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 a { 
   text-decoration: none;
   transition: all .2s;
@@ -44,6 +50,13 @@ a {
 }
 .button:hover {
   background-color: var(--primary-hover-color);
+}
+.button.primary {
+  color: var(--primary-color);
+  background-color: var(--light-color);
+}
+.button.primary:hover {
+  background-color: var(--light-gray-color);
 }
 
 #root {
@@ -95,14 +108,20 @@ footer div svg {
   align-items: center;
   justify-content: space-between;
 }
-.row.center {
-  justify-content: center;
-}
 .row.top {
   align-items: flex-start;
 }
+.row.center {
+  justify-content: center;
+}
 .row.left {
   justify-content: flex-start;
+}
+.row.right {
+  justify-content: flex-end;
+}
+.row.space {
+  justify-content: space-around;
 }
 .col-1 {
   flex: 1 1 25rem;
@@ -213,7 +232,7 @@ header .row.left a:hover {
   border-radius: 1rem;
 }
 .card-container h2 {
-  border-bottom: 1px solid var(--white-gray-color);
+  border-bottom: 1px solid var(--light-gray-color);
   padding-bottom: 1rem;
 }
 
@@ -233,7 +252,7 @@ header .row.left a:hover {
   width: 1000px;
   height: 400px;
   max-width: 100%;
-  margin: 30px 1rem 120px 1rem;
+  margin: 30px 1rem;
   padding: 0;
   background: #FFF;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
@@ -253,4 +272,16 @@ header .row.left a:hover {
   width: 100%;
   height: 100%;
   border-radius: 10px;
+}
+
+/* OrderSummary */
+.order-summary-container {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 10px;
+  padding: 13px 20px;
+  margin-bottom: 20px;
+}
+.order-summary-container strong {
+  margin-right: 5px;
 }
