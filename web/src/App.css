@@ -249,9 +249,8 @@ header .row.left a:hover {
 
 /* Order Location */
 .order-location-container {
-  width: 1000px;
+  width: 90vw;
   height: 400px;
-  max-width: 100%;
   margin: 30px 1rem;
   padding: 0;
   background: #FFF;
