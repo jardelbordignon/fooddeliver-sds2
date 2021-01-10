@@ -1,9 +1,10 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
+
 import Home from './Home'
 import Orders from './Orders'
-import Header from '../components/Header'
+import OrderDetails from './OrderDetails'
 
 const {Screen, Navigator} = createStackNavigator()
 
@@ -18,6 +19,7 @@ export default function AppRoutes() {
 
         <Screen name='Home' component={Home} />
         <Screen name='Orders' component={Orders} />
+        <Screen name='OrderDetails' component={OrderDetails} />
 
       </Navigator>
     </NavigationContainer>
