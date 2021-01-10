@@ -1,17 +1,21 @@
+import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { StyleSheet, Text, View, Image, Alert } from 'react-native'
 import { RectButton } from 'react-native-gesture-handler'
 
 import Logo from '../assets/deliveryman.png'
+import Header from '../components/Header'
 
 export default function Home() {
+  const nav = useNavigation()
 
   const handleOnPress = () => {
-    Alert.alert('Ver Pedidos')
+    nav.navigate('Orders')
   }
 
   return (
     <>
+      <Header />
       <View style={styles.container}>
         <Image source={Logo} />
         <Text style={styles.title}>
